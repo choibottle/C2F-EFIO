@@ -1,0 +1,78 @@
+<launch>
+    <!--For the back-end -->
+    <arg name="calibration_file" default="$(find mono_tracker)/../config/droneracing/camchain-imucam-IF.yaml"/> 
+
+    <node pkg="mono_tracker" type="mono_tracker"
+        name="mono_tracker">
+        <rosparam command="load" file="$(arg calibration_file)" />
+        <!-- Remapping : put your topics -->
+
+        <remap from="left_img" to="/dvs/image_raw"/>
+        <remap from="events" to="/dvs/events"/>
+        <remap from="imu" to="/dvs/imu"/>
+        
+        <param name="max_cnt" value="150" type="int"/>
+        <param name="min_dist" value="10" type="int"/>
+        <param name="window_size" value="20" type="int"/>
+        
+        <param name="max_events" value="10000" type="int"/>
+        <param name="life_pixel" value="3" type="double"/>
+
+        <param name="eta" value="0.2" type="double"/>
+        <param name="patch_size" value="71" type="int"/>
+        <param name="pix_th" value="0.4" type="double"/>
+        <param name="ransac_iter" value="100" type="int"/>
+
+        <param name="dist_thr" value="8" type="double"/>
+        <param name="theta_thr" value="5" type="double"/>
+    </node>
+
+    <node pkg="smsckf_nesl" type="estimator_node"
+        name="estimator_node">
+        <!-- Initial std_dev [rad, m, m/s, m/s^2, rad/s] -->
+        <param name="P0/attitude" value="0.0175" type="double"/>
+        <param name="P0/position" value="1e-10" type="double"/>
+        <param name="P0/velocity" value="1e-1" type="double"/>
+        <param name="P0/ba" value="2e-1" type="double"/>
+        <param name="P0/bg" value="0.0262" type="double"/>
+        <param name="num_init_samples" value="600" type="int"/>
+
+        <!-- Process noises [rad/s^(1/2), m/s^(3/2), m/s^(5/2), rad/s^(3/2)]-->
+        <param name="Q/atttiude" value="2.4e-3" type="double"/>
+        <param name="Q/velocity" value="2.3e-2" type="double"/>
+        <param name="Q/ba" value="2.5e-3" type="double"/>
+        <param name="Q/bg" value="7e-5" type="double"/>
+
+        <!-- MSCKF parameters -->
+        <param name="MinSLW" value="3" type="int"/>
+        <param name="MaxSLW" value="10" type="int"/>
+
+        <param name="R_f" value="1.0" type="double"/>
+        <param name="R_e" value="1.0" type="double"/>
+        <param name="R_e_L" value="1.0" type="double"/>
+
+        <param name="chi" value="0.95" type="double"/>
+        <param name="R_zupt_v_" value="0.01" type="double"/>
+        <param name="R_zupt_p_" value="0.01" type="double"/>
+        <param name="R_zupt_q_" value="0.0175" type="double"/>
+        <param name="thr_zupt" value="0.7" type="double"/>
+        <param name="use_vision" value="1" type="bool"/>
+        <param name="use_gps" value="0" type="bool"/>
+
+        <!-- Camera/IMU in/extrinsic paramters -->
+        <rosparam command="load" file="$(arg calibration_file)" />
+        <param name="fps" value="32.0" type="double"/>
+        <param name="roll_imu_vehicle" value="0.0" type="double"/>
+        <param name="pitch_imu_vehicle" value="0.0" type="double"/>
+        <param name="yaw_imu_vehicle" value="0.0" type="double"/>
+
+        <!-- Feature Triangulation Parameters -->
+        <param name="MaxDist" value="40.0" type="double"/>
+        <param name="MinDist" value="0.2" type="double"/>
+        <param name="CostProp" value="40.0" type="double"/>
+
+        <!-- Remapping : put your topics -->
+        <remap from="imu" to="/dvs/imu"/>
+    </node>
+
+</launch>

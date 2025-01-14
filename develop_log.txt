@@ -1,0 +1,42 @@
+Development log file 
+
+# 19.05.05
+ - Design stereo tracker
+
+# 19.05.07
+ - topic names in *.launch file using remap
+ - creates synchronized stereo image callback using message_filter
+
+# 19.05.09
+ - Stereo tracker without RANSAC completed
+ - rviz.launch file created
+
+# 19.05.10
+ - Stereo tracker finished !
+ - right features are stacked on the left one, that is:
+   pointclouldPtr->points : left, right
+   therefore, points.size() = 2*ids.size() always
+
+# 19.05.10
+ - Design stereo MSCKF
+ - Evaluate the estimator : consistent evaluation completed
+
+ # 21.02.23
+ - design coarse alignment, fast propagator
+
+ # 21.03.23
+ - visual-inertial time-offset online calibration implemented
+
+ # 21.03.30
+ - Code style refactoring
+
+# 24.08.04
+ - 'Event-frame-inertial odometry using point and line features' algorithm implementation finished !
+ - Event processing, Coarse-to-fine motion compensation, Event line detection and tracking, Adaptive event accumulation
+ - MSCKF using point and line features (line feature Jacobians calculation, line feature triangulation parts added)
+
+ # 24.11.29
+ - Time-consumption calculation code for real-time analysis added
+
+ # 25.01.07
+ - Code style refactoring
