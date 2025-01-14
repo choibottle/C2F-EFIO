@@ -23,6 +23,31 @@ cd catkin_ws
 catkin_make
 ```
 
+* Expected directory structure:
+
+```
+catkin_ws
+│   src
+|     config
+|     dvs_msgs
+|     mono_tracker
+|     msckf_estimator
+|     rviz
+│   build
+│   devel
+|   dataset
+|     ECDS
+│       └───boxes_6dof.bag
+|       .
+|       .
+│       └───shapes_translation.bag
+|     droneracing
+│       └───indoor_45_2_davis_with_gt.bag
+|       .
+|       .
+│       └───indoor_forward_10_davis_with_gt.bag
+```
+
 
 
 ### 3. Run
