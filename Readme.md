@@ -105,7 +105,7 @@ If you feel this work helpful to your academic research, we kindly ask you to ci
 
 ### 5. Acknowledgements
 
-This research was supported by the National Research Foundation of Korea (NRF), funded by the Ministry of Science and ICT, the Republic of Korea. 
+This research was supported by the National Research Foundation of Korea (NRF), funded by the Ministry of Science and ICT, the Republic of Korea. (NRF-2022R1A2C2012166)
 
 
 
