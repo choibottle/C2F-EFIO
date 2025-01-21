@@ -87,11 +87,28 @@ catkin_ws
 
 
 
-### 4. Acknowledgements
+### 4. Citation
+
+If you feel this work helpful to your academic research, we kindly ask you to cite our paper :
+
+```
+@article{C2F-EFIO_RAL,
+  title={Event-Frame-Inertial Odometry Using Point and Line Features Based on Coarse-to-Fine Motion Compensation},
+  author={Choi, Byeongpil and Lee, Hanyeol and Park, Chan Gook},
+  journal={IEEE Robotics and Automation Letters},
+  year={2025},
+  publisher={IEEE}
+}
+```
+
+
+
+### 5. Acknowledgements
 
 This research was supported by the National Research Foundation of Korea (NRF), funded by the Ministry of Science and ICT, the Republic of Korea. 
 
 
-### 5. License
+
+### 6. License
 
 Our source code is released under MIT license. If you encounter any issues or have questions, please contact the author at bpc1224@snu.ac.kr.
