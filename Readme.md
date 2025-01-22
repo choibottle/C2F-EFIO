@@ -89,10 +89,10 @@ catkin_ws
 
 ### 4. Results
 
-* Line detection accuracy
+* Line detection
 ![outline](./pics/line_results.png)
 
-* Pose estimation accuracy
+* Pose estimation
 ![outline](./pics/pose_results.png)
 
 
