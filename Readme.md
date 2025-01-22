@@ -87,7 +87,17 @@ catkin_ws
 
 
 
-### 4. Citation
+### 4. Results
+
+* Line detection accuracy
+![outline](./pics/line_results.png)
+
+* Pose estimation accuracy
+![outline](./pics/pose_results.png)
+
+
+
+### 5. Citation
 
 If you feel this work helpful to your academic research, we kindly ask you to cite our paper :
 
@@ -103,12 +113,12 @@ If you feel this work helpful to your academic research, we kindly ask you to ci
 
 
 
-### 5. Acknowledgements
+### 6. Acknowledgements
 
 This research was supported by the National Research Foundation of Korea (NRF), funded by the Ministry of Science and ICT, the Republic of Korea. (NRF-2022R1A2C2012166)
 
 
 
-### 6. License
+### 7. License
 
 Our source code is released under MIT license. If you encounter any issues or have questions, please contact the author at bpc1224@snu.ac.kr.
