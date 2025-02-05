@@ -4,7 +4,7 @@
 
 ### 1. Overview
 
-This repository contains the ROS package for **Event-Frame-Inertial Odometry Using Point and Line Features Based on Coarse-to-Fine Motion Compensation (C2F-EFIO)**, written in **C++**.
+This repository contains the ROS package for **Event-Frame-Inertial Odometry Using Point and Line Features Based on Coarse-to-Fine Motion Compensation (C2F-EFIO)**, written in **C++**. [[Paper]](https://ieeexplore.ieee.org/abstract/document/10855459)
 
 
 
