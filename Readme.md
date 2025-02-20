@@ -89,14 +89,20 @@ catkin_ws
 
 ### 4. Results
 
-* Line detection
-![outline](./pics/line_results.png)
+* Line detection  
+<div align="center">
+  <img src="./pics/line_results.png" width="500">
+</div>
 
-* Pose estimation
-![outline](./pics/pose_results.png)
+* Pose estimation  
+<div align="center">
+  <img src="./pics/pose_results.png" width="500">
+</div>
 
-* Video demo
-![outline](./pics/IF_6.gif)
+* Video demo  
+<div align="center">
+  <img src="./pics/IF_6.gif" width="400">
+</div>
 
 
 ### 5. Citation
