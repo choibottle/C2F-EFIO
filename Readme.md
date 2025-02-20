@@ -91,7 +91,7 @@ catkin_ws
 
 * Line detection  
 <div align="center">
-  <img src="./pics/line_results.png" width="600">
+  <img src="./pics/line_results.png" width="800">
 </div>
 
 * Pose estimation  
