@@ -99,11 +99,6 @@ catkin_ws
   <img src="./pics/pose_results.png" width="600">
 </div>
 
-* Video demo  
-<div align="center">
-  <img src="./pics/IF_6.gif" width="600">
-</div>
-
 
 ### 5. Citation
 
