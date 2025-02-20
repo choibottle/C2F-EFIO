@@ -95,6 +95,8 @@ catkin_ws
 * Pose estimation
 ![outline](./pics/pose_results.png)
 
+* Video demo
+![outline](./pics/IF_6.gif)
 
 
 ### 5. Citation
