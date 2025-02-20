@@ -91,17 +91,17 @@ catkin_ws
 
 * Line detection  
 <div align="center">
-  <img src="./pics/line_results.png" width="500">
+  <img src="./pics/line_results.png" width="800" height="500>
 </div>
 
 * Pose estimation  
 <div align="center">
-  <img src="./pics/pose_results.png" width="500">
+  <img src="./pics/pose_results.png" width="600" height="400>
 </div>
 
 * Video demo  
 <div align="center">
-  <img src="./pics/IF_6.gif" width="400">
+  <img src="./pics/IF_6.gif" width="800" height="500>
 </div>
 
 
